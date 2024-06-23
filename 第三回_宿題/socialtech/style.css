@@ -1,0 +1,257 @@
+/* PC、スマホ共通スタイル */
+body{
+    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+p{
+    font-size: 15px;
+}
+
+/*================
+ PC用のスタイル 
+=================*/
+body{
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
+}
+
+/* ヘッダー */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+#nav-pc{
+    font-size: 14px;
+    padding-top: 15px;
+}
+#nav-pc > a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+#nav-pc > a:link{
+    color: #0d0d0d;
+}
+#nav-pc > a:visited{
+    color: #0d0d0d;
+}
+#nav-pc > a:hover{
+    color: #0d0d0d;
+    text-decoration: underline;
+}
+#nav-pc > a:active{
+    color: #0d0d0d;
+}
+
+/* メインビジュアル */
+#main-visual{
+    /*子要素で「position: absolute;」を使用したいので「relative」をここに記述*/
+    position: relative;
+    height: 400px;
+}
+#main-message{
+    /*親要素を基準にした絶対位置を指定*/
+    position: absolute;
+        top: 0;
+        left: 0;
+    background-color: #2710d5;
+    color: #ffffff;
+    border-radius: 0 0 476px 0;
+    width: 100%;
+    height: 100%;
+    max-width: 620px;
+    z-index: 11;
+}
+#main-message > h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin: 100px 0 0 50px;
+}
+#main-message > p{
+    font-size: 28px;
+    margin: 0 0 0 50px;
+}
+#main-visual > img{
+    max-width: 620px;
+    border-radius: 476px 0 0 0;
+    position: absolute;
+        top: 0;
+        right: 0;
+    z-index: 10;
+}
+
+/* mission */
+h2{
+    margin: 40px 0 0 0 ;
+}
+h2::after{
+    content: url("images/line.png");
+    margin-left: 10px;
+}
+h3{
+    font-size: 27px;
+}
+#mission{
+    margin: 80px auto;
+    width: 100%;
+}
+#mission-flex{
+    width: 100%;
+    display: flex;
+}
+#mission-flex > div{
+    width: 50%;
+    margin: 20px;
+}
+#mission-photo{
+    width: 100%;
+}
+#s2dgs{
+    margin: 50px 0 0 0;
+    width: 100%;
+}
+
+/* product */
+#product{
+    background-color: #fafafa;
+    margin: 80px 0 80px 0;
+    padding: 10px 40px 0px 40px;
+}
+#product > div{
+    margin-top: 40px;
+    display: flex;
+}
+#product-left{
+    width: 50%;
+    margin-right: 20px;
+}
+#product-right{
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 80px; 
+}
+#product-left > div{
+    position: relative;
+    height: 480px;
+    margin-right: 20px;
+}
+#product-right > div{
+    position: relative;
+    height: 480px;
+    margin-left: 20px;
+}
+.product-photo{
+    width: 100%;
+}
+.product-explain{
+    background-color: #ffffff;
+    position: absolute;
+        left: 0;
+        top: 280px;
+    margin: 0 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+.product-explain > span{
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+.product-explain > h3{
+    font-size: 20px;
+    margin: 5px 0;
+}
+.product-explain > p{
+    font-size: 14px;
+    margin: 0;
+}
+#product-more{
+    margin: 0 auto -42px auto;
+}
+
+/* aboutus */
+#aboutus{
+    margin: 80px auto;
+}
+#aboutus > div{
+    display: flex;
+}
+.culture-img{
+    width: 100%;
+    align-self: flex-start;
+}
+.culture-img2{
+    margin: 50px 0 0 0;
+    width: 100%;
+}
+.culture-table{
+    margin: 0 50px 0 0 ;
+}
+.culture-num{
+    font-size: 80px;
+    color: #2710d5;
+    margin: 0 20px 0 0 ;
+}
+.culture-en{
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+}
+.culture-jp{
+    font: 28px;
+    font-weight: bold;
+}
+.culture-description{
+    margin: 0;
+}
+
+/* vision */
+#vision{
+    margin: 80px auto;
+}
+#vision > div{
+    width: 100%;
+    display: flex;
+    /* 一番左と一番右の子要素を両端に配置し、残りの子要素を均等な間隔で配置する */
+    justify-content: space-between;
+    /* 幅が足りなくなったら上から下に折り返しする */
+    flex-wrap: wrap;
+}
+.vision-box{
+    width: 300px;
+    height: 300px;
+    margin: 0 0 30px 0;
+    position: relative;
+}
+.vision-box > img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+        top: 0;
+        left: 0;
+    z-index: 30;
+}
+.vision-box > span{
+    position: absolute;
+        top: 0;
+        left: 0;
+    z-index: 31;
+    margin: 0 20px 0 0;
+}
+.vision-box > span > h4{
+    color: #2710d5;
+    font-size: 19px;
+    margin: 80px 0 0 0;
+}
+.vision-box > span > h4 ::first-letter{
+    font-size: 40px;
+}
+.vision-box > span > h5{
+    font-size: 20px;
+    margin: 0;
+}
+.vision-box > span > p{
+    margin: 10px 0 0 0;
+}
